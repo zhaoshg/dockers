@@ -2,6 +2,7 @@ FROM debian:jessie-slim
 
 ADD jre-8u121-linux-x64.tar.gz /usr/local/
 ADD tomcat.8.5.13.tar.gz /usr/local/
+ADD sources.list /etc/apt/
 
 RUN apt-get update && apt-get install curl -y  && rm -rf /var/lib/apt/lists/*
 
